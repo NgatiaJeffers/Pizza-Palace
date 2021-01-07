@@ -11,3 +11,23 @@
     box-sizing: border-box;
 }
 
+.navbar {
+    padding: 20px 0;
+}
+
+.nav-item {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.navbar-light .navbar-nav .nav-link {
+
+}
+.banner {
+    position: relative;
+    background: url('../img/piz1.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 250px 0 200px;
+}
