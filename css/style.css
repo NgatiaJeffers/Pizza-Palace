@@ -15,6 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    background-color: #fff !important;
+}
+
 .navbar {
     padding: 20px 0;
 }
@@ -33,6 +37,11 @@ html {
 .navbar-light .navbar-nav .nav-item .nav-link {
     color: #3f451c;
     padding: 5px 15px;
+}
+
+.navbar-light .navbar-nav .nav-item .nav-link:hover {
+    text-decoration: none;
+    color: #3f451c !important;
 }
 
 .banner {
@@ -94,9 +103,6 @@ html {
     outline: none;
 }
 
-.navbar-collapse {
-    background: #fff;
-}
 
 @media (max-width: 768px) {
     .banner {
@@ -315,5 +321,69 @@ a:hover {
     }
 }
 
+/* =========== PIES STYLE ============= */
+.navbar-icon-top .navbar-nav .nav-link .fa {
+    position: relative;
+    width: 40px;
+    font-size: 28px;
+}
 
+
+.navbar-icon-top .navbar-nav .nav-link  .fa  .badge {
+    font-size: 0.80rem;
+    position: absolute;
+    right: 0;
+}
+
+
+.navbar-icon-top .navbar-nav .nav-link .fa {
+    top: 3px;
+    line-height: 15px;
+}
+
+
+.navbar-icon-top .navbar-nav .nav-link .fa .badge {
+    top: -10px;
+}
+
+.yellow {
+    background: #e08d3c;
+    color: #3f451c;
+    text-transform: uppercase;
+    padding: 20px 30px;
+}
+
+.white {
+    background: #fff;
+    color: #3f451c;
+    text-transform: uppercase;
+    padding: 20px 30px;
+}
+
+
+.pie-area {
+    position: relative;
+    min-height: 100vh;
+    padding:0 0 200px;
+    background-color: #ddddd5;
+}
+
+.left-column {
+    background-color: #fff !important;
+    min-height: 100vh;
+}
+
+.display-4 {
+    margin-left: 2.5em;
+    margin-top: 1em;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.piz-list {
+    margin-left: 5em;
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-weight: 500;
+}
 
