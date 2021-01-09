@@ -59,7 +59,7 @@
 
 .button {
     display: inline-block;
-    background: #4285f4;
+    background: #3f451c;
     color: #fff;
     text-transform: uppercase;
     padding: 20px 30px;
@@ -103,4 +103,13 @@
     }
 }
 
+/* Jumbotron */
+.display-4 {
+    font-weight: 300;
+    color: #3f451c;
+    font-size: 3em;
+}
+
+
+/* About Styling */
 
