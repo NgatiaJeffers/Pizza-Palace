@@ -150,9 +150,9 @@ html {
 }
 
 .content {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 
@@ -166,7 +166,7 @@ html {
     text-decoration: none;
     font-size: 1.25rem;
     margin-left: 10px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 
@@ -178,4 +178,15 @@ html {
 .pizza-content {
     font-size: 1.1em;
     margin-left: 10px;
+}
+
+
+/* View Area */
+.view-area {
+    height: 250px;
+    color: #3f451c;
+}
+
+.view-para {
+    font-size: 1.6em;
 }
