@@ -128,6 +128,8 @@ html {
     background-attachment: fixed;
 
 }
+
+
 .right {
     background-color: #ddddd5;
     min-height: 100vh;
@@ -286,6 +288,31 @@ a:hover {
     outline: none;
     border-radius: 0 16px 16px 0;
     padding: 1px 5px;
+}
+
+/* Meedia Queris */
+@media (max-width: 768px) {
+    .btn-left {
+        height: 300px;
+    }
+
+    .pizza {
+        height: 350px;
+    }
+
+    .about-pizza {
+        text-align: left !important;
+    }
+
+    .view-title {
+        text-align: left !important;
+        font-size: 1em;
+    }
+
+    .view-para {
+        text-align: left !important;
+        font-size: 1.2em;
+    }
 }
 
 
