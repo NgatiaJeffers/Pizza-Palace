@@ -363,7 +363,7 @@ a:hover {
 
 .pie-area {
     position: relative;
-    min-height: 100vh;
+    /* min-height: 80vh; */
     padding:0 0 200px;
     background-color: #ddddd5;
 }
@@ -376,8 +376,7 @@ a:hover {
 .display-4 {
     margin-left: 2.5em;
     margin-top: 1em;
-    font-weight: 600;
-    text-decoration: underline;
+    font-weight: 500;
 }
 
 .piz-list {
@@ -386,4 +385,45 @@ a:hover {
     font-size: 1.5em;
     font-weight: 500;
 }
+
+.piz-title {
+    font-size: 2em;
+    margin-top: 1em;
+}
+
+.display-7 {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.pieces {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.form-select {
+    margin-bottom: 10px;
+}
+
+.card-one {
+    float: left;
+}
+
+.card-two {
+    float: left;
+    margin-left: 1em;
+}
+
+.card-three {
+    float: left;
+    margin-left: 1em;
+}
+
+/* Footer */
+.pie-footer {
+    height: 200px;
+    color: #ffffff;
+}
+
+
 
