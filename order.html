@@ -48,24 +48,24 @@
                             <table class="table table-borderless w-70">
                                 <tbody>
                                     <tr class="text-muted">
-                                        <span class="pizza-name"><td>Pizza 🍕 Name</td></span>
+                                        <span class="pizza-name"><td></td></span>
                                         <td>:</td>
-                                        <span class="pizza-price"><td>$</td></span>
+                                        <span class="pizza-price"><td></td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Pizza 🍕 Size</td>
                                         <td>:</td>
-                                        <span class="pizza-size"><td>$</td></span>
+                                        <span class="pizza-size"><td></td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Favorite Crust</td>
                                         <td>:</td>
-                                        <span class="pizza-crust"><td>$</td></span>
+                                        <span class="pizza-crust"><td></td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Toppings</td>
                                         <td>:</td>
-                                        <span class="pizza-topping"><td>$</td></span>
+                                        <span class="pizza-topping"><td></td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Quantity</td>
@@ -77,7 +77,7 @@
                                     <tr class="text-muted">
                                         <td>Total</td>
                                         <td>:</td>
-                                        <span class="total"><td>$</td></span>
+                                        <span class="total"><td></td></span>
                                     </tr>
                                 </tbody>
                             </table>
@@ -109,65 +109,46 @@
                         <div class="my-3">
                             <label for="Flavor" class="form-label">Flavor</label>
                             <select class="form-select flavour">
-                                <option selected>Eg Crusty Pizza, Deluxe...</option>
-                                <option value="1">Deluxe Pizza 🍕</option>
-                                <option value="2">Periper Chicken Pizza 🍕</option>
-                                <option value="3">Pepperoni Pizza 🍕</option>
-                                <option value="4">Crusty Pizza 🍕</option>
-                                <option value="5">All Meat Pizza 🍕</option>
+                                <option value="Deluxe Pizza">Deluxe Pizza 🍕</option>
+                                <option value="Periper Chicken Pizza">Periper Chicken Pizza 🍕</option>
+                                <option value="Pepperoni Pizza">Pepperoni Pizza 🍕</option>
+                                <option value="crusty Pizza">Crusty Pizza 🍕</option>
+                                <option value="All Meat Pizza">All Meat Pizza 🍕</option>
                             </select>
                         </div>
 
                         <div class="my-3">
                             <label for="pizza-size" class="form-label">Pizza 🍕 Size</label>
                                 <select class="form-select pizza-size" aria-label="Default select example">
-                                    <option selected>Pick your favorite</option>
-                                    <option value="1">Sm.(6 slices) $10.99</option>
-                                    <option value="2">Md.(8 slices) $14.99</option>
-                                    <option value="3">Lg.(8 slices) $16.99</option>
-                                    <option value="4">Xg.(12 slices) $18.99</option>
+                                    <option value="small">Sm.(6 slices) $10.99</option>
+                                    <option value="Medium">Md.(8 slices) $14.99</option>
+                                    <option value="Large">Lg.(8 slices) $16.99</option>
+                                    <option value="Extra large">Xg.(12 slices) $18.99</option>
                             </select>
                         </div>
 
                         <div class="my-3">
                             <label for="favorite-crust" class="form-label">Favorite Crust</label>
                                 <select class="form-select favorite" aria-label="Default select example">
-                                    <option selected>Crust</option>
-                                    <option value="1">Crispy 2$ cal.per each</option>
-                                    <option value="2">Stuffed 6$ cal.per each</option>
-                                    <option value="3">Gluten-tree 7$ cal.per each</option>
+                                    <option value="Crispy">Crispy 2$ cal.per each</option>
+                                    <option value="Stuffed">Stuffed 6$ cal.per each</option>
+                                    <option value="Gluten-tree">Gluten-tree 7$ cal.per each</option>
                             </select>
                         </div>
 
                         <div class="my-3">
                             <label for="toppings" class="form-label">Toppings</label>
                                 <select class="form-select toppings" aria-label="Default select example">
-                                    <option selected>Crust</option>
-                                    <option value="1">Tomatoes 10$ each</option>
-                                    <option value="2">Onions 10$ cal.per each</option>
-                                    <option value="3">Olive Oil 13$ cal.per each</option>
-                                    <option value="4">Meat Balls 200$ cal.per each</option>
-                                    <option value="5">Pinapple 80$ cal.per each</option>
-                                    <option value="6">Mushroom 40$ cal.per each</option>
-                                    <option value="7">Bacon 56$ cal.per each</option>
+                                    <option value="Tomatoes">Tomatoes 10$ each</option>
+                                    <option value="Onions">Onions 10$ cal.per each</option>
+                                    <option value="Olive Oil">Olive Oil 13$ cal.per each</option>
+                                    <option value="Meat Balls">Meat Balls 200$ cal.per each</option>
+                                    <option value="Pinapple">Pinapple 80$ cal.per each</option>
+                                    <option value="Mushrooms">Mushroom 40$ cal.per each</option>
+                                    <option value="Bacon">Bacon 56$ cal.per each</option>
                             </select>
                         </div>
                         <button class="btn check" id="extract">Extract</button>
-                        <!-- <div class="d-flex align-items-center">
-                            <div class="display-5">Subtotal</div>
-                            <div class="ml-auto font-weight-bold">$80.9</div>
-                        </div>
-                        <div class="d-flex align-items-center py-2 border-bottom">
-                            <div class="display-5">Shipping</div>
-                            <div class="ml-auto font-weight-bold">$12.9</div>
-                        </div>
-                        <div class="d-flex align-items-center py-2">
-                            <div class="display-5">Total</div>
-                            <div class="ml-auto d-flex">
-                                <div class="text-primary text-uppercase px-3">usd</div>
-                                <div class="font-weight-bold">$92.98</div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
