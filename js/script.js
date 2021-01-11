@@ -1,29 +1,17 @@
 // Add to Cart
-(function() {
-    const cartBtn = document.querySelectorAll("#add-cart");
+// (function() {
+//     const cartBtn = document.querySelectorAll("#add-cart");
 
-    cartBtn.forEach(function(btn){
-        btn.addEventListener("click", function(event) {
-            // console.log(event.target);
-
-            // const item = {};
-            // let name = event.target.parentElement.parentElement.nextElementSibling.children[0].children[0].textContent;
-
-            // console.log(name);
-        })
-    })
-
-})();
+// })();
 
 // Post The Result
-$(function() {
-
-    $(".checkout").click(function () {
-        let flavor = (".flavour option:selected").val();
-        let size = (".pizza-size option:selected").val();
-        let crust = (".favorite option:selected").val();
-        let toppings = (".toppings option:selected").val();
-        console.log(flavor);
+$(document).ready(function() {
+    $("#extract").click(function () {
+        let flavor = $(".flavour option:selected").val();
+        let size = $(".pizza-size option:selected").val();
+        let crust = $(".favorite option:selected").val();
+        let toppings = $(".toppings option:selected").val();
+        // console.log(flavor);
 
         // Order
         let order = (f, s, c, t, total) => {
@@ -32,9 +20,9 @@ $(function() {
 
         let price, totalPrice;
         switch(flavor) {
-            case flavor = "Deluxe Pizza 🍕":
+            case flavor = "Deluxe Pizza":
                 switch (size) {
-                    case size = "Sm.(6 slices) $10.99":
+                    case size = "small":
                         price = 10.99;
                         if(crust === "Crispy") {
                             totalPrice = (price + 2.99)
@@ -46,7 +34,7 @@ $(function() {
                             totalPrice = (price + 20.99)
                         }
                         break;
-                        case size = "Md.(8 slices) $14.99":
+                        case size = "Medium":
                             price = 14.99;
                             if(crust === "Crispy") {
                                 totalPrice = (price + 2.99)
@@ -58,7 +46,7 @@ $(function() {
                                 totalPrice = (price + 20.99)
                             }
                         break;
-                        case size = "Lg.(8 slices) $16.99":
+                        case size = "Large":
                             price = 16.99;
                             if(crust === "Crispy") {
                                 totalPrice = (price + 2.99)
@@ -70,7 +58,7 @@ $(function() {
                                 totalPrice = (price + 20.99)
                             }
                         break;
-                        case size = "Xg.(12 slices) $18.99":
+                        case size = "Extra Large":
                             price = 18.99;
                             if(crust === "Crispy") {
                                 totalPrice = (price + 2.99)
@@ -84,9 +72,9 @@ $(function() {
                         break;
                 }
 
-                case flavor = "Periper Chicken Pizza 🍕":
+                case flavor = "Periper Chicken Pizza":
                     switch (size) {
-                        case size = "Sm.(6 slices) $10.99":
+                        case size = "small":
                             price = 10.99;
                             if(crust === "Crispy") {
                                 totalPrice = (price + 2.99)
@@ -98,7 +86,7 @@ $(function() {
                                 totalPrice = (price + 20.99)
                             }
                             break;
-                            case size = "Md.(8 slices) $14.99":
+                            case size = "Medium":
                                 price = 14.99;
                                 if(crust === "Crispy") {
                                     totalPrice = (price + 2.99)
@@ -110,7 +98,7 @@ $(function() {
                                     totalPrice = (price + 20.99)
                                 }
                             break;
-                            case size = "Lg.(8 slices) $16.99":
+                            case size = "Large":
                                 price = 16.99;
                                 if(crust === "Crispy") {
                                     totalPrice = (price + 2.99)
@@ -122,7 +110,7 @@ $(function() {
                                     totalPrice = (price + 20.99)
                                 }
                             break;
-                            case size = "Xg.(12 slices) $18.99":
+                            case size = "Extra Large":
                                 price = 18.99;
                                 if(crust === "Crispy") {
                                     totalPrice = (price + 2.99)
@@ -135,9 +123,9 @@ $(function() {
                                 }
                             break;
                     }
-                    case flavor = "Pepperoni Pizza 🍕":
+                    case flavor = "Pepperoni Pizza":
                         switch (size) {
-                            case size = "Sm.(6 slices) $10.99":
+                            case size = "small":
                                 price = 10.99;
                                 if(crust=== "Crispy") {
                                     totalPrice = (price + 2.99)
@@ -149,7 +137,7 @@ $(function() {
                                     totalPrice = (price + 20.99)
                                 }
                                 break;
-                                case size = "Md.(8 slices) $14.99":
+                                case size = "Medium":
                                     price = 14.99;
                                     if(crust === "Crispy") {
                                         totalPrice = (price + 2.99)
@@ -161,7 +149,7 @@ $(function() {
                                         totalPrice = (price + 20.99)
                                     }
                                 break;
-                                case size = "Lg.(8 slices) $16.99":
+                                case size = "Large":
                                     price = 16.99;
                                     if(crust === "Crispy") {
                                         totalPrice = (price + 2.99)
@@ -173,7 +161,7 @@ $(function() {
                                         totalPrice = (price + 20.99)
                                     }
                                 break;
-                                case size = "Xg.(12 slices) $18.99":
+                                case size = "Extra Large":
                                     price = 18.99;
                                     if(crust === "Crispy") {
                                         totalPrice = (price + 2.99)
@@ -187,9 +175,9 @@ $(function() {
                                 break;
                         }
 
-                        case flavor = "crusty Pizza 🍕":
+                        case flavor = "crusty Pizza":
                             switch (size) {
-                                case size = "Sm.(6 slices) $10.99":
+                                case size = "small":
                                     price = 10.99;
                                     if(crust === "Crispy") {
                                         totalPrice = (price + 2.99)
@@ -201,7 +189,7 @@ $(function() {
                                         totalPrice = (price + 20.99)
                                     }
                                     break;
-                                    case size = "Md.(8 slices) $14.99":
+                                    case size = "Medium":
                                         price = 14.99;
                                         if(crust === "Crispy") {
                                             totalPrice = (price + 2.99)
@@ -213,7 +201,7 @@ $(function() {
                                             totalPrice = (price + 20.99)
                                         }
                                     break;
-                                    case size = "Lg.(8 slices) $16.99":
+                                    case size = "Large":
                                         price = 16.99;
                                         if(crust === "Crispy") {
                                             totalPrice = (price + 2.99)
@@ -225,7 +213,7 @@ $(function() {
                                             totalPrice = (price + 20.99)
                                         }
                                     break;
-                                    case size = "Xg.(12 slices) $18.99":
+                                    case size = "Extra Large":
                                         price = 18.99;
                                         if(crust === "Crispy") {
                                             totalPrice = (price + 2.99)
@@ -239,9 +227,9 @@ $(function() {
                                     break;
                             }
 
-                            case flavor = "All Meat Pizza 🍕":
+                            case flavor = "All Meat Pizza":
                                 switch (size) {
-                                    case size = "Sm.(6 slices) $10.99":
+                                    case size = "small":
                                         price = 10.99;
                                         if(crust === "Crispy") {
                                             totalPrice = (price + 2.99)
@@ -253,7 +241,7 @@ $(function() {
                                             totalPrice = (price + 20.99)
                                         }
                                         break;
-                                        case size = "Md.(8 slices) $14.99":
+                                        case size = "Medium":
                                             price = 14.99;
                                             if(crust === "Crispy") {
                                                 totalPrice = (price + 2.99)
@@ -265,7 +253,7 @@ $(function() {
                                                 totalPrice = (price + 20.99)
                                             }
                                         break;
-                                        case size = "Lg.(8 slices) $16.99":
+                                        case size = "Large":
                                             price = 16.99;
                                             if(crust === "Crispy") {
                                                 totalPrice = (price + 2.99)
@@ -277,7 +265,7 @@ $(function() {
                                                 totalPrice = (price + 20.99)
                                             }
                                         break;
-                                        case size = "Xg.(12 slices) $18.99":
+                                        case size = "Extra Large":
                                             price = 18.99;
                                             if(crust === "Crispy") {
                                                 totalPrice = (price + 2.99)
@@ -292,41 +280,40 @@ $(function() {
                                 }
             }
             switch (toppings) {
-                case toppings = "Tomatoes 10$ each":
-                    totalPrice = totalPrice + 10.00;
+                case toppings = "Tomatoes":
+                    totalPrice = (totalPrice + 10.00);
                     break;
-                case toppings = "Onions 10$ cal.per each":
-                    totalPrice = totalPrice + 10.00;
+                case toppings = "Onions":
+                    totalPrice = (totalPrice + 10.00);
                     break;
-                case toppings = "Olive Oil 13$ cal.per each":
-                    totalPrice = totalPrice + 13.00;
+                case toppings = "Olive Oil":
+                    totalPrice = (totalPrice + 13.00);
                     break;
-                case toppings = "Meat Balls 200$ cal.per eachf":
-                    totalPrice = totalPrice + 200.00;
+                case toppings = "Meat Balls":
+                    totalPrice = (totalPrice + 200.00);
                     break;
-                case toppings = "Pinapple 80$ cal.per each":
-                    totalPrice = totalPrice + 80.00;
+                case toppings = "Pinapple":
+                    totalPrice = (totalPrice + 80.00);
                     break;
-                case toppings = "Mushroom 40$ cal.per each":
-                    totalPrice = totalPrice + 40.00;
+                case toppings = "Mushroom":
+                    totalPrice = (totalPrice + 40.00);
                     break;
-                case toppings = "Bacon 56$ cal.per each":
-                    totalPrice = totalPrice + 56.00;
+                case toppings = "Bacon":
+                    totalPrice = (totalPrice + 56.00);
                     break;
             }
 
             let newOrder = order(flavor, size, crust, toppings, totalPrice);
+            console.log(newOrder)
             
+            $('')
 
-            $("#extract").click(function() {
-                $('.table').text("");
-                $('.table').append("<span class='pizza-name'><td>" + newOrder.f + "</td></span>")
-                $('.table').append("<span class='pizza-price'><td>" + newOrder.total + "</td></span>")
-                $('.table').append("<span class='pizza-size'><td>" + newOrder.s + "</td></span>")
-                $('.table').append("<span class='pizza-crust'><td>" + newOrder.c + "</td></span>")
-                $('.table').append("<span class='pizza-topping'><td>" + newOrder.t + "</td></span>")
-                $('.table').append("<span class='total'><td>" + newOrder.total + "</td></span>")
-            });
+                $('.pizza-name').append("<td>" + newOrder.f + "</td>")
+                $('.pizza-price').append(newOrder.total + '$' )
+                $('.pizza-size').append(newOrder.s )
+                $('.pizza-crust').append(newOrder.c )
+                $('.pizza-topping').append(newOrder.t )
+                // $('.text-muted').append("<span class='total'><td>" + newOrder.total + "</td></span>")
 
     });
 
