@@ -12,7 +12,7 @@ Order your favorite pizza.
 
 ## Screenshot:
 
-<img src="img/pizzaa.png">
+<img src="img/pizzaa.png" href="https://ngatiajeffers.github.io/Pizza-Palace/">
 
 ## Setup/Installation Requirements
 
