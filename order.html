@@ -48,36 +48,36 @@
                             <table class="table table-borderless w-70">
                                 <tbody>
                                     <tr class="text-muted">
-                                        <td>Flavor</td>
+                                        <span class="pizza-name"><td>Pizza 🍕 Name</td></span>
                                         <td>:</td>
-                                        <td>$80.9</td>
+                                        <span class="pizza-price"><td>$</td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Pizza 🍕 Size</td>
                                         <td>:</td>
-                                        <td>$13.99</td>
+                                        <span class="pizza-size"><td>$</td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Favorite Crust</td>
                                         <td>:</td>
-                                        <td>$13.99</td>
+                                        <span class="pizza-crust"><td>$</td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Toppings</td>
                                         <td>:</td>
-                                        <td>$13.99</td>
+                                        <span class="pizza-topping"><td>$</td></span>
                                     </tr>
                                     <tr class="text-muted">
                                         <td>Quantity</td>
                                         <td>:</td>
                                         <td>
-                                            <div class="d-flex align-items-center"> <span class="fa fa-minus btn text-muted"></span> <span>2</span> <span class="fa fa-plus btn text-muted"></span> </div>
+                                        <span class="fa fa-minus btn text-muted"></span> <span class="quantity">1</span> <span class="fa fa-plus btn text-muted"></span>
                                         </td>
                                     </tr>
                                     <tr class="text-muted">
-                                        <td>Items</td>
+                                        <td>Total</td>
                                         <td>:</td>
-                                        <td>$200.99</td>
+                                        <span class="total"><td>$</td></span>
                                     </tr>
                                 </tbody>
                             </table>
@@ -87,9 +87,8 @@
                             <option value="">Standard-Delivery $5</option>
                         </select>
                         <div class="border-top py-2 d-flex align-items-center ml-2 font-weight-bold">
-                            <div>Total</div>
-                            <div class="ml-auto text-primary">USD</div>
-                            <div class="px-2">$205.98</div>
+                            <div>Total Cost</div>
+                            <div class="px-2"><span class="total-cost">$0.00</span></div>
                         </div>
                         <button class="btn check">CHECKOUT</button>
                     </div>
@@ -108,8 +107,8 @@
                             <div class="ml-auto"> <b class="h5" id="dollar">$80.9</b> </div>
                         </div>
                         <div class="my-3">
-                            <label for="inputState" class="form-label">Flavor</label>
-                            <select id="inputState" class="form-select">
+                            <label for="Flavor" class="form-label">Flavor</label>
+                            <select class="form-select flavour">
                                 <option selected>Eg Crusty Pizza, Deluxe...</option>
                                 <option value="1">Deluxe Pizza 🍕</option>
                                 <option value="2">Periper Chicken Pizza 🍕</option>
@@ -120,8 +119,8 @@
                         </div>
 
                         <div class="my-3">
-                            <label for="inputState" class="form-label">Pizza 🍕 Size</label>
-                                <select class="form-select" aria-label="Default select example">
+                            <label for="pizza-size" class="form-label">Pizza 🍕 Size</label>
+                                <select class="form-select pizza-size" aria-label="Default select example">
                                     <option selected>Pick your favorite</option>
                                     <option value="1">Sm.(6 slices) $10.99</option>
                                     <option value="2">Md.(8 slices) $14.99</option>
@@ -131,8 +130,8 @@
                         </div>
 
                         <div class="my-3">
-                            <label for="inputState" class="form-label">Favorite Crust</label>
-                                <select class="form-select" aria-label="Default select example">
+                            <label for="favorite-crust" class="form-label">Favorite Crust</label>
+                                <select class="form-select favorite" aria-label="Default select example">
                                     <option selected>Crust</option>
                                     <option value="1">Crispy 2$ cal.per each</option>
                                     <option value="2">Stuffed 6$ cal.per each</option>
@@ -141,8 +140,8 @@
                         </div>
 
                         <div class="my-3">
-                            <label for="inputState" class="form-label">Toppings</label>
-                                <select class="form-select" aria-label="Default select example">
+                            <label for="toppings" class="form-label">Toppings</label>
+                                <select class="form-select toppings" aria-label="Default select example">
                                     <option selected>Crust</option>
                                     <option value="1">Tomatoes 10$ each</option>
                                     <option value="2">Onions 10$ cal.per each</option>
@@ -153,7 +152,8 @@
                                     <option value="7">Bacon 56$ cal.per each</option>
                             </select>
                         </div>
-                        <div class="d-flex align-items-center">
+                        <button class="btn check" id="extract">Extract</button>
+                        <!-- <div class="d-flex align-items-center">
                             <div class="display-5">Subtotal</div>
                             <div class="ml-auto font-weight-bold">$80.9</div>
                         </div>
@@ -167,7 +167,7 @@
                                 <div class="text-primary text-uppercase px-3">usd</div>
                                 <div class="font-weight-bold">$92.98</div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
