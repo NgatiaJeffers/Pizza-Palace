@@ -304,15 +304,14 @@ $(document).ready(function() {
             }
 
             let newOrder = order(flavor, size, crust, toppings, totalPrice);
-            console.log(newOrder)
             
-            $('')
-
-                $('.pizza-name').append("<td>" + newOrder.f + "</td>")
-                $('.pizza-price').append(newOrder.total + '$' )
-                $('.pizza-size').append(newOrder.s )
-                $('.pizza-crust').append(newOrder.c )
-                $('.pizza-topping').append(newOrder.t )
+            $("")
+                $('.pz').append(newOrder.f)
+                $('.td').append(newOrder.total + '$' )
+                $('.ps').append(newOrder.s )
+                $('.pc').append(newOrder.c )
+                $('.pt').append(newOrder.t )
+                $('.tt').append(newOrder.total + '$' )
                 // $('.text-muted').append("<span class='total'><td>" + newOrder.total + "</td></span>")
 
     });
