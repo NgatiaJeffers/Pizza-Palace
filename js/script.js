@@ -1,42 +1,97 @@
 // Add to Cart
-$(document).ready(function() {
-    var addToCart = $('.card'),
-    cart = $('.cd-cart');
+window.onload = function() {
+    const addToCart = document.querySelector('.cd-cart');
 
-    initCustomize(addToCart);
-
-    $('body').on('click', function(event) {
-        if($(event.target).is('body') || $(event.target).is('.products')) {
-            deactivateCustomize();
-        }
-    });
-
-    function initCustomize(items) {
-        items.each(function(){
-            var actual = $(this),
-            selectOptions = actual.find('[data-type="select]'),
-            addToCartBtn = actual.find('.add-cart');
-
-            selectOptions.on('click', function(event) {
-                var selected = $(this);
-
-                selected.toogleClass('is-open');
-                resetCustomization(selected);
-
-                if($(event.target).is('option')) {
-                    var activeItem = $(event.target),
-                    index = activeItem.index() + 1;
-
-                    activeItem.addClass('active').children().removeClass('active');
-                    selected.removeClass('selected-1 selected-2 selected-3 selected-4').addClass('selected-'+index);
+    // Adding data to localStorage
+    const cartBtn = document.getELementsByClassName("add-cart");
+    let items = [];
+    for(let i=0; i < cartBtn.length; i++) {
+        cartBtn[i].addEventListener("click", function(e) {
+            if(typeof(storage) !== 'undefined'){
+                let item = {
+                    id:i+1,
+                    name:e.target.parentElement.children[0].textContent,
+                    price:e.target.parentElement.children[1].children[0].textContent,
+                    no:1
                 }
-            })
-        })
+                if(JSON.parse(localStorage.getItem('items')) === null){
+                    items.push(item);
+                    localStorage.setItem("items", JSON.stringify(items));
+                    window.location.reload();
+                } else {
+                    const localItems = JSON.parse(localStorage.getItem("items"));
+                    localItems.map(data => {
+                        if(item.id == data.id) {
+                            item.no = data.no + 1;
+                        } else {
+                            items.push(data);
+                        }
+                    })
+                    items.push(item);
+                    localStorage.setItem('items', JSON.stringify(items));
+                    window.location.reload();
+                }
+            } else {
+                alert('Local storage is not working on your browser');
+            }
+        });
     }
 
+    // Adding data to Shopping cart
+    const cart = document.querySelector('.cd-cart span');
+    let no = 0;
+    JSON.parse(localStorage.getItem('items')).map(data => {
+        no = no + data.no
+    });
+    cart.innerHTML = no;
+}
 
 
-})
+
+
+
+// $(document).ready(function() {
+//     var addToCart = $('.card'),
+//     cart = $('.cd-cart');
+
+//     initCustomize(addToCart);
+
+//     $('body').on('click', function(event) {
+//         if($(event.target).is('body') || $(event.target).is('.products')) {
+//             deactivateCustomize();
+//         }
+//     });
+
+//     function initCustomize(items) {
+//         items.forEach(function(){
+//             var actual = $(this),
+//             selectOptions = actual.find('[data-type="select]'),
+//             addToCartBtn = actual.find('.add-cart');
+
+//             selectOptions.on('click', function(event) {
+//                 var selected = $(this);
+
+//                 if($(event.target).is('option')) {
+//                     var activeItem = $(event.target),
+//                     index = activeItem.index() + 1;
+
+//                     activeItem.addClass('active').children().removeClass('active');
+//                     selected.removeClass('selected-1 selected-2 selected-3 selected-4').addClass('selected-'+index);
+//                 }
+//             })
+//         });
+
+//         console.log(initCustomize());
+//     }
+
+//     function updateCart() {
+//         (!cart.hasClass('items-added')) && cart.addClass('items-added');
+
+//         var cartItems = cart.find('span'),
+//         text = parseInt(cartItems.text()) + 1;
+//         cartItems.text(text);
+//     }
+// })
 
 
 
