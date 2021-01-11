@@ -12,7 +12,7 @@ Order your favorite pizza.
 
 ## Screenshot:
 
-<img src="img/pizza.png">
+<img src="img/pizzaa.png">
 
 ## Setup/Installation Requirements
 
