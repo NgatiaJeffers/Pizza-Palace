@@ -9,6 +9,7 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="fonts/css/fontawesome.css">
     <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -62,7 +63,7 @@
                                         <td>Quantity</td>
                                         <td>:</td>
                                         <td>
-                                        <span class="fa fa-minus btn text-muted"></span> <span class="quantity">1</span> <span class="fa fa-plus btn text-muted"></span>
+                                            <input type="number" class="count" value="1"/>
                                         </td>
                                     </tr>
                                     <tr class="text-muted">
@@ -74,14 +75,33 @@
                             </table>
                         </div>
                         <label for="inputState" class="form-label">Shipping</label>
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="">Standard-Delivery $5</option>
+                        <select class="form-select ship" aria-label="Default select example">
+                            <option value="5">Standard-Delivery $5</option>
                         </select>
                         <div class="border-top py-2 d-flex align-items-center ml-2 font-weight-bold">
                             <div>Total Cost</div>
                             <div class="px-2"><span class="total-cost">$</span></div>
                         </div>
-                        <button class="btn check">CHECKOUT</button>
+                        <button href="#myModal" data-toggle="modal" class="btn check">CHECKOUT</button>
+                        <button class="btn clear">CLEAR ORDER</button>
+                    </div>
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog modal-confirm">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="icon-box">
+                                        <i class="material-icons">&#xE876;</i>
+                                    </div>				
+                                    <h4 class="modal-title w-100">Awesome!</h4>	
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">Your order has been confirmed. Check your email for detials.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-success btn-block" data-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -141,12 +161,16 @@
                                     <option value="Bacon">Bacon 56$ cal.per each</option>
                             </select>
                         </div>
-                        <button class="btn check" id="extract">Extract</button>
+                        <button class="btn check1" id="extract">Extract</button>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
+
+
 
 
 
@@ -155,15 +179,12 @@
 
 
 
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" ></script>
-    <script src="js/jquery-2.1.4.js"></script>
     <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
     <script src="js/script.js"></script>
+    <script src="https://pagecdn.io/lib/popper/2.4.4/umd/popper.js" crossorigin="anonymous"  ></script>
+    <script src="https://pagecdn.io/lib/popper/2.4.4/umd/popper.min.js" crossorigin="anonymous"  ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 </html>
 
