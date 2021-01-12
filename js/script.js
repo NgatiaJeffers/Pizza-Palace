@@ -5,6 +5,8 @@ $(document).ready(function() {
         let size = $(".pizza-size option:selected").val();
         let crust = $(".favorite option:selected").val();
         let toppings = $(".toppings option:selected").val();
+        let ship = $(".ship option:selected").val();
+        let quantity = $(".quantity option:selected").val();
         // console.log(flavor);
 
         // Order
@@ -297,19 +299,65 @@ $(document).ready(function() {
                     break;
             }
 
-            let newOrder = order(flavor, size, crust, toppings, totalPrice);
+
+ 
+        var newOrder = {
+        
+            saveCart: function (object) {
             
-            $("")
+                var stringified = JSON.stringify(object);
+                localStorage.setItem(newOrder, stringified);
+                return true;
+            
+            },
+            getCart: function () {
+            
+                return JSON.parse(localStorage.getItem(newOrder));
+            
+            },
+            clearCart: function () {
+            
+                localStorage.removeItem(newOrder);
+            
+            }
+        
+        };
+
+        var newOrder = order(flavor, size, crust, toppings, totalPrice);
+
+            
                 $('.pz').append(newOrder.f)
-                $('.td').append(newOrder.total + '$' )
+                $('.td').append(parseInt(newOrder.total + '$').toFixed(2))
                 $('.ps').append(newOrder.s )
                 $('.pc').append(newOrder.c )
                 $('.pt').append(newOrder.t )
                 $('.tt').append(newOrder.total + '$' )
-
-                $('.total-cost').append(parseInt(newOrder.total * 5).toFixed(2));
+                $('.total-cost').append(parseInt(newOrder.total * 5));
 
     });
+
+    // var item = {
+    //     name = getAttribute('.')
+    // }
+
+    // itemData: function (object) {
+ 
+    //     var count = object.querySelector(".count"),
+    //         patt = new RegExp("^[1-9]([0-9]+)?$");
+    //     count.value = (patt.test(count.value) === true) ? parseInt(count.value) : 1;
+ 
+    //     var item = {
+ 
+    //         name: object.getAttribute('data-name'),
+    //         price: object.getAttribute('data-price'),
+    //         id: object.getAttribute('data-id'),
+    //         count: count.value,
+    //         total: parseInt(object.getAttribute('data-price')) * parseInt(count.value)
+ 
+    //     };
+    //     return item;
+ 
+    // },
 
 
 
